@@ -4,6 +4,11 @@ import { PokemonController } from './pokemon.controller';
 
 @Module({
   controllers: [PokemonController],
-  providers: [PokemonService]
+  providers: [PokemonService],
+  imports: [
+    MongooseModule.forFeature([
+      
+    ])
+  ],
 })
 export class PokemonModule {}
