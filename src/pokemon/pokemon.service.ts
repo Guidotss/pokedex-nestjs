@@ -30,6 +30,20 @@ export class PokemonService {
     }
   }
 
+  async createMany(createPokemonDto: CreatePokemonDto[]) {
+    try {
+      const pokemons = await this.pokemonModel.create(
+        createPokemonDto.map(({ name, no }) => ({
+          name: name.toLowerCase(),
+          no,
+        })),
+      );
+      return pokemons;
+    } catch (error) {
+      this.handleException(error);
+    }
+  }
+
   findAll() {
     return this.pokemonModel.find();
   }
