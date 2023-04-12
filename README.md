@@ -23,11 +23,20 @@
   ```bash
   $ docker-compose up -d
   ```
+5. Clonar el archivo `.env.template` y renombrarlo a `.env`
+6. Llenar las variables de entorno en el archivo `.env`
+7. Ejecutar la aplicacion en modo desarrollo
+  ```bash
+  $ npm run start:dev
+  # or
+  $ yarn start:dev
+  ```
 
-5. Reconstruir la base de datos
+8. Reconstruir la base de datos
   ```bash
   http://localhost:3000/api/v2/seed
   ```
+
 
 ## Tecnologías utilizadas
 
